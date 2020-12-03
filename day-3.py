@@ -4,55 +4,22 @@
 # Cedarville University Leaderboard             #
 # ********************************************* #
 
-# Process a grid
+def hits(grid, x_offset, y_offset):
+    x, y, sum = 0, 0, 0
+    while (x < len(grid)):
+        if grid[x][y] == '#': sum += 1
+        x += x_offset
+        y += y_offset
+        y %= len(grid[0])
+    return sum
 
 grid = list(line.strip() for line in open('input/day-3.txt'))
 
-sum_1 = 0
-sum_2 = 0
-sum_3 = 0
-sum_4 = 0
-sum_5 = 0
-
-x, y = 0, 0
-while (x < len(grid)):
-    if grid[x][y] == '#':
-        sum_1 += 1
-    x += 1
-    y += 1
-    y %= len(grid[0])
-
-x, y = 0, 0
-while (x < len(grid)):
-    if grid[x][y] == '#':
-        sum_2 += 1
-    x += 1
-    y += 3
-    y %= len(grid[0])
-
-x, y = 0, 0
-while (x < len(grid)):
-    if grid[x][y] == '#':
-        sum_3 += 1
-    x += 1
-    y += 5
-    y %= len(grid[0])
-
-x, y = 0, 0
-while (x < len(grid)):
-    if grid[x][y] == '#':
-        sum_4 += 1
-    x += 1
-    y += 7
-    y %= len(grid[0])
-
-x, y = 0, 0
-while (x < len(grid)):
-    if grid[x][y] == '#':
-        sum_5 += 1
-    x += 2
-    y += 1
-    y %= len(grid[0])
+sum_1 = hits(grid, 1, 1)
+sum_2 = hits(grid, 1, 3)
+sum_3 = hits(grid, 1, 5)
+sum_4 = hits(grid, 1, 7)
+sum_5 = hits(grid, 2, 1)
 
 print("Sum 1:", sum_1)
 print("Sum 2:", sum_2)

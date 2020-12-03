@@ -28,7 +28,7 @@ def printMember(member):
     print("")
 
 
-cookie = {'session': 'COOKIE_GOES_HERE'}
+cookie = {'session': '53616c7465645f5f816b91b1bf79fea54cdf932a543b7c7fac366b0ac4d816a894340d7d50ea2e68f4584db40af04ef7'}
 r = requests.get(
     'https://adventofcode.com/2020/leaderboard/private/view/668907.json', cookies=cookie)
 data = r.content
