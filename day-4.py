@@ -98,5 +98,3 @@ for line in lines:
 
 print("Sum 1:", sum_1)
 print("Sum 2:", sum_2)
-
-# 105 is too high
