@@ -24,6 +24,5 @@ for line in lines:
 
 print("Highest Seat ID:", max(seat_ids))
 
-seat_ids.sort()
 for n in range(min(seat_ids), max(seat_ids)):
     if n not in seat_ids: print("Missing Seat", n)
