@@ -51,5 +51,5 @@ while len(layer):
     sum_2 += sum(list(new_layer.values())) 
     layer = new_layer
 
-print("SUM 1:", sum_1) #378
+print("SUM 1:", sum_1) # 378
 print("SUM 2:", sum_2) # 27526
