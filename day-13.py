@@ -31,7 +31,7 @@ class ShuttleSearch:
 def main(args):
 
     ss = ShuttleSearch()
-    num_1 = ss.tmp()
+    num_1 = ss.part_1()
     num_2 = ss.part_2()
 
     print("Earliest Bus ID:", num_1[0] * num_1[1])
